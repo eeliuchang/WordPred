@@ -1,0 +1,48 @@
+Word Prediction App
+========================================================
+author: Chang Liu
+date: 08/20/2015
+
+Introduction
+========================================================
+
+Word Prediction App is to use machine learning and data mining techniques to create a product which can predict the next word for the use's input. Basically, it has the following features:
+
+- It allows users to input text with multiple words
+- It uses n-grams algorithm to predict the next word 
+- Then the result will show up for users
+
+-The app can be found through this link:
+http://eeliuchang.shinyapps.io/WordPred
+
+
+
+Prediction Algorithm
+========================================================
+
+
+Baisally I use n-gram word prediction algorithm based on markov models.
+- To predict the next word for a text, the algorithm would reply on the probability of seeing this word together with the previous words.
+- In an n-gram, we truncate the history to length n − 1 and maximize the conditional probability of seeing that word given all the n-1 words before.
+- This is based on Markov assumption: probability of some future event (next word) depends only on a limited history of preceding events
+(previous words).
+- If no match can be found, then find the previous n-2 words and do that same maximization until we find the best match.
+
+A Novel Approach
+========================================================
+- I developed a novel approach for word prediction which is based on topic which works well for a long sentence or more input words.
+- The primary goal is to find the topic of the input sentence or previous words. 
+- To preprocess this, first define the topics in all the corpus which we have where topics includes sports, money, health, politics, entertainments, living and etc.
+- Then we can match the input sentence to the topic. 
+- Finally find the n-gram output within the topic.
+
+Instruction on How to use the App
+========================================================
+There are two parts in the app
+- On the left-hand side, you can input your words (multiple)
+- On the right-hand side, the prediction system will give you a single word which is most likely to appear next to what you have input
+
+References
+- Hornik, K. Journal of Statistial Software
+- Coursera Course Packet
+- Coursera online forum, discussion blogs and online resources
